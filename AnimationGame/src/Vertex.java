@@ -44,9 +44,14 @@ public class Vertex {
 		y = y*s;
 	}
 	
-	public Vertex add(Vertex v2)  //addition zweier vertex
+	/*public Vertex add(Vertex v2)  //addition zweier vertex
 	{
 		return new Vertex(x + v2.x, y + v2.y);
+	}
+	*/
+	public Vertex add(Vertex v)
+	{
+		return new Vertex(x+v.x, y+v.y);
 	}
 	
 	public void addMod(Vertex v2)    //addition
@@ -94,7 +99,7 @@ public class Vertex {
 		if(thatObject instanceof Vertex)
 		{
 			Vertex that = (Vertex)thatObject;
-			return this.x==that.x && this.x == that.y;
+			return this.x==that.x && this.y == that.y;
 		}
 		
 		return false;
